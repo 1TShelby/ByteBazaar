@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0;url=./index.html"/>
+  <script>
+    // Сохраняем текущий путь, куда пользователь хотел попасть
+    // Например: если был запрос yoursite.com/about, то location.pathname = "/about"
+    sessionStorage.redirect = "/index.html;
+    
+    // location.pathname - это часть URL после домена
+    // Примеры:
+    // yoursite.com/portfolio → location.pathname = "/portfolio"
+    // yoursite.com/about.html → location.pathname = "/about.html"
+    // yoursite.com/ → location.pathname = "/"
+  </script>
+  
+  <!-- Перенаправляем пользователя на главную страницу -->
+  <meta http-equiv="refresh" content="0; URL=/">
+  <!-- 
+    content="0; URL=/" означает:
+    - 0 - ждать 0 секунд
+    - URL=/ - перенаправить на главную страницу
+  -->
 </head>
 <body>
-  Redirecting to home page...
+  <!-- Пустое тело, так как страница сразу перенаправляется -->
 </body>
 </html>
