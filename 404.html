@@ -6,7 +6,7 @@
   <script>
     // Сохраняем текущий путь, куда пользователь хотел попасть
     // Например: если был запрос yoursite.com/about, то location.pathname = "/about"
-    sessionStorage.redirect = "/index.html;
+    sessionStorage.redirect = location.pathname;
     
     // location.pathname - это часть URL после домена
     // Примеры:
