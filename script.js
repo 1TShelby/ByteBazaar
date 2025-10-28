@@ -16,7 +16,7 @@ function updateCartCounter() {
     if (cartCounter) {
         cartCounter.textContent = cart.length;
         cartCounter.style.display = cart.length > 0 ? 'flex' : 'none';
-}}
+}
 
 function showNotification(message) {
     // Create notification element
