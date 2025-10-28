@@ -108,11 +108,11 @@ class CustomNavbar extends HTMLElement {
         
         <ul class="nav-links">
           <li><a href="/"><i data-feather="home"></i>Главная</a></li>
-          <li><a href="/products.html"><i data-feather="shopping-cart"></i>Товары</a></li>
-          <li><a href="/about.html"><i data-feather="info"></i>О нас</a></li>
-          <li><a href="/contact.html"><i data-feather="mail"></i>Контакты</a></li>
+          <li><a href="products.html"><i data-feather="shopping-cart"></i>Товары</a></li>
+          <li><a href="about.html"><i data-feather="info"></i>О нас</a></li>
+          <li><a href="contact.html"><i data-feather="mail"></i>Контакты</a></li>
           <li class="cart-icon">
-            <a href="/cart.html">
+            <a href="cart.html">
               <i data-feather="shopping-bag"></i>
               <span class="cart-counter" id="cart-counter"></span>
             </a>
@@ -126,10 +126,10 @@ class CustomNavbar extends HTMLElement {
         <div class="mobile-menu hidden" id="mobile-menu">
           <ul class="mobile-nav-links">
             <li><a href="/"><i data-feather="home"></i>Главная</a></li>
-            <li><a href="/products.html"><i data-feather="shopping-cart"></i>Товары</a></li>
-            <li><a href="/about.html"><i data-feather="info"></i>О нас</a></li>
-            <li><a href="/contact.html"><i data-feather="mail"></i>Контакты</a></li>
-            <li><a href="/cart.html"><i data-feather="shopping-bag"></i>Корзина</a></li>
+            <li><a href="products.html"><i data-feather="shopping-cart"></i>Товары</a></li>
+            <li><a href="about.html"><i data-feather="info"></i>О нас</a></li>
+            <li><a href="contact.html"><i data-feather="mail"></i>Контакты</a></li>
+            <li><a href="cart.html"><i data-feather="shopping-bag"></i>Корзина</a></li>
           </ul>
         </div>
       </nav>
@@ -143,5 +143,6 @@ class CustomNavbar extends HTMLElement {
     }
   }
 }
+
 
 customElements.define('custom-navbar', CustomNavbar);
