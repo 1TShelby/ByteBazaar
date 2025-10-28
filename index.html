@@ -157,4 +157,14 @@
         });
     </script>
 </body>
+<script>
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.pathname) {
+      redirect = redirect.replace(/^\//, '');
+      window.history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
 </html>
