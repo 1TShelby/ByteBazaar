@@ -114,7 +114,7 @@ class CustomNavbar extends HTMLElement {
             <li><a href="cart.html"><i data-feather="shopping-bag"></i>Корзина</a></li>
 <li><a href="cart.html"><i data-feather="shopping-bag"></i>Корзина</a></li>
 <li class="cart-icon">
-            <a href="/cart.html">
+            <a href="cart.html">
               <i data-feather="shopping-bag"></i>
               <span class="cart-counter" id="cart-counter"></span>
             </a>
@@ -147,3 +147,4 @@ class CustomNavbar extends HTMLElement {
 }
 
 customElements.define('custom-navbar', CustomNavbar);
+
