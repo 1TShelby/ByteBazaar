@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - ByteBazaar</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="pt-20 min-h-screen">
+        <!-- Header -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl font-bold text-center mb-8 text-gray-800">Корзина</h1>
+                <p class="text-xl text-center text-gray-600 max-w-2xl mx-auto">
+            Здесь собраны все выбранные вами товары
+                </p>
+            </div>
+        </section>
+
+        <!-- Cart Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Cart Items -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-gray-800">Товары в корзине</h2>
+                            
+                            <!-- Empty Cart State -->
+                            <div id="empty-cart" class="text-center py-12">
+                                <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-feather="shopping-bag" class="text-gray-400 text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Корзина пуста</h3>
+                                <p class="text-gray-600 mb-6">Добавьте товары из каталога, чтобы увидеть их здесь</p>
+                                <a href="/products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition duration-300">
+                                        <i data-feather="shopping-cart" class="mr-2"></i>
+                                        Перейти к покупкам
+                                    </a>
+                            </div>
+
+                            <!-- Cart Items List -->
+                            <div id="cart-items" class="hidden">
+                                <!-- Cart Item 1 -->
+                                <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+                                <img src="http://static.photos/technology/120x90/1" alt="Товар" class="w-20 h-20 object-cover rounded-lg">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-gray-800">Игровой ПК "CyberStorm"</h3>
+                                        <p class="text-gray-600 text-sm">RTX 4070, Ryzen 7 7800X3D, 32GB DDR5</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-blue-600 font-bold">89 999 ₽</p>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <button class="text-gray-500 hover:text-red-500 transition duration-300">
+                                                <i data-feather="trash-2" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cart Item 2 -->
+                                    <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+                                        <img src="http://static.photos/technology/120x90/2" alt="Товар" class="w-20 h-20 object-cover rounded-lg">
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800">Монитор Samsung Odyssey</h3>
+                                            <p class="text-gray-600 text-sm">27", 240Hz, QHD, IPS</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="text-blue-600 font-bold">34 999 ₽</p>
+                                            <div class="flex items-center gap-2 mt-2">
+                                                <button class="text-gray-500 hover:text-red-500 transition duration-300">
+                                                <i data-feather="trash-2" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-gray-800">Сводка заказа</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Товары (2)</span>
+                                    <span class="font-semibold">124 998 ₽</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Доставка</span>
+                                    <span class="font-semibold">Бесплатно</span>
+                                </div>
+                                <div class="border-t border-gray-200 pt-4">
+                                    <div class="flex justify-between text-lg font-bold">
+                                        <span>Итого</span>
+                                        <span>124 998 ₽</span>
+                                </div>
+                                
+                                <button class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 mt-4">
+                                            Перейти к оформлению
+                                        </button>
+                                
+                                <div class="mt-6 text-center">
+                                    <a href="/products.html" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                                                <i data-feather="plus" class="mr-2"></i>
+                                                Продолжить покупки
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-feather="shield" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Безопасная оплата</h3>
+                                <p class="text-gray-600">Принимаем карты, электронные кошельки и банковские переводы</p>
+                            </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-feather="truck" class="text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Быстрая доставка</h3>
+                                <p class="text-gray-600">Доставка по Москве в течение 24 часов</p>
+                            </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-feather="refresh-cw" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Легкий возврат</h3>
+                                <p class="text-gray-600">Возврат товара в течение 14 дней без объяснения причин</p>
+                            </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Simple cart state management for UI
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const emptyCartDiv = document.getElementById('empty-cart');
+            const cartItemsDiv = document.getElementById('cart-items');
+            
+            if (cart.length > 0) {
+                emptyCartDiv.style.display = 'none';
+                cartItemsDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
