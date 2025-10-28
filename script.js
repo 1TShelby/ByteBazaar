@@ -33,7 +33,7 @@ function showNotification(message) {
     
     // Animate out and remove
     setTimeout(() => {
-        notification.style.transform = 'translateX(full)';
+        notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
             document.body.removeChild(notification);
         }, 300);
@@ -84,3 +84,4 @@ function formatPrice(price) {
         minimumFractionDigits: 0
     }).format(price);
 }
+
