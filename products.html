@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - ByteBazaar</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="pt-20 min-h-screen">
+        <!-- Header -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl font-bold text-center mb-8 text-gray-800">Каталог товаров</h1>
+                <p class="text-xl text-center text-gray-600 max-w-2xl mx-auto">
+            Откройте для себя лучшие предложения в мире компьютерной техники
+                </p>
+            </div>
+        </section>
+
+        <!-- Filters and Search -->
+        <section class="bg-gray-100 py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                    <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                    <input type="text" placeholder="Поиск товаров..." class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-64" oninput="searchProducts(this.value)">
+                    <select class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-48">
+                        <option value="">Все категории</option>
+                        <option value="computers">Компьютеры</option>
+                        <option value="laptops">Ноутбуки</option>
+                        <option value="components">Комплектующие</option>
+                        <option value="peripherals">Периферия</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/5" alt="Игровой компьютер" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Игровой ПК "CyberStorm Pro"</h3>
+                        <p class="text-gray-600 text-sm mb-4">RTX 4080, Ryzen 9 7900X, 64GB DDR5, 2TB NVMe</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">149 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 1, "name": "Игровой ПК CyberStorm Pro", "price": 149999, "image": "http://static.photos/technology/320x240/5"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/6" alt="Ноутбук" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">MacBook Pro 16"</h3>
+                        <p class="text-gray-600 text-sm mb-4">M3 Max, 48GB RAM, 1TB SSD, Liquid Retina XDR</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">299 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 2, "name": "MacBook Pro 16\"", "price": 299999, "image": "http://static.photos/technology/320x240/6"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/7" alt="Монитор" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Монитор LG UltraGear</h3>
+                        <p class="text-gray-600 text-sm mb-4">34", 144Hz, QHD, Nano IPS, Curved</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">54 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 3, "name": "Монитор LG UltraGear", "price": 54999, "image": "http://static.photos/technology/320x240/7"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/8" alt="Клавиатура" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Клавиатура Logitech MX Mechanical</h3>
+                        <p class="text-gray-600 text-sm mb-4">Wireless, Mechanical, Low Profile, Backlit</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">14 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 4, "name": "Клавиатура Logitech MX Mechanical", "price": 14999, "image": "http://static.photos/technology/320x240/8"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/9" alt="Мышь" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Мышь Razer Viper V2 Pro</h3>
+                        <p class="text-gray-600 text-sm mb-4">Wireless, 30K DPI, Optical Switches, 80h Battery</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">9 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 5, "name": "Мышь Razer Viper V2 Pro", "price": 9999, "image": "http://static.photos/technology/320x240/9"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="http://static.photos/technology/320x240/10" alt="Наушники" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Наушники Sony WH-1000XM5</h3>
+                        <p class="text-gray-600 text-sm mb-4">Wireless, Noise Cancelling, 30h Battery</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">34 999 ₽</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300" data-product='{"id": 6, "name": "Наушники Sony WH-1000XM5", "price": 34999, "image": "http://static.photos/technology/320x240/10"}'>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<custom-footer></custom-footer>
+
+<script src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
+<script src="script.js"></script>
+<script>
+    feather.replace();
+</script>
+</body>
+</html>

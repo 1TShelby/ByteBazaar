@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - ByteBazaar</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="pt-20 min-h-screen">
+        <!-- Header -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl font-bold text-center mb-8 text-gray-800">О компании</h1>
+                <p class="text-xl text-center text-gray-600 max-w-2xl mx-auto">
+            Узнайте больше о нашей миссии, ценностях и команде профессионалов
+                </p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Наша история</h2>
+                        <p class="text-gray-600 mb-4">
+                            ByteBazaar был основан в 2020 году группой энтузиастов, которые верили, что покупка компьютерной техники должна быть простой, прозрачной и доступной для всех.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            Мы начали с небольшого магазина в центре Москвы и за несколько лет выросли в один из ведущих онлайн-ритейлеров компьютерной техники в России.
+                        </p>
+                        <p class="text-gray-600">
+                            Сегодня мы гордимся тем, что помогаем тысячам клиентов найти идеальное техническое решение для их нужд.
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Наша миссия</h3>
+                        <p>
+                            Делать передовые технологии доступными для каждого, предоставляя качественные продукты, экспертные консультации и превосходное обслуживание клиентов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Наша команда</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/1" alt="Директор" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Алексей Иванов</h3>
+                        <p class="text-blue-600 font-medium mb-2">Генеральный директор</p>
+                        <p class="text-gray-600">Основатель компании с 15-летним опытом в IT-индустрии</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/2" alt="Менеджер" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Мария Петрова</h3>
+                        <p class="text-blue-600 font-medium mb-2">Технический директор</p>
+                        <p class="text-gray-600">Эксперт в области компьютерных технологий и системной архитектуры</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/3" alt="Специалист" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Дмитрий Сидоров</h3>
+                        <p class="text-blue-600 font-medium mb-2">Менеджер по продажам</p>
+                        <p class="text-gray-600">Помогает клиентам найти идеальное решение для их задач</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">10K+</div>
+                        <div class="text-gray-600">Довольных клиентов</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">5 лет</div>
+                        <div class="text-gray-600">На рынке</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                        <div class="text-gray-600">Товаров в каталоге</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                        <div class="text-gray-600">Поддержка</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
