@@ -158,13 +158,11 @@
     </script>
 </body>
 <script>
-  (function(){
-    var redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect != location.pathname) {
-      redirect = redirect.replace(/^\//, '');
-      window.history.replaceState(null, null, redirect);
-    }
-  })();
+  // Проверяем hash в URL и показываем соответствующий контент
+  if (window.location.hash) {
+    var route = window.location.hash.substring(1); // убираем # 
+    showPage(route); // ваша функция для показа страницы
+  }
 </script>
 </html>
+
